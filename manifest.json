@@ -3,7 +3,7 @@
   "name": "Phil SMASH",
   "version": "6.1",
   "description": "if the dom is really a tree, there's got to be an apple somewhere in there.",
-  "web_accessible_resources": ["yeetasaurus.png"], // can be more than one
+  "web_accessible_resources": ["yeetasaurus.png"], 
   "content_scripts": [
     {
       "matches": ["*://*/*"],
