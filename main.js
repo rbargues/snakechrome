@@ -22,11 +22,12 @@ class Head {
     this.grabDomElem();
     this.node = head;
     this.currentDirection = 'right';
-    this.SPEED = 400;
+    this.SPEED = 100;
     el.appendChild(this.node);
     this.top = 0;
     this.left = 0;
-    this.node.style.cssText = `top: ${this.top}px; left: ${this.left}px`;
+    this.side = 50;
+    this.node.style.cssText = `top: ${this.top}px; left: ${this.left}px; width: ${this.side}px; height: ${this.side}px`;
     this.move = this.move.bind(this);
     setInterval(this.move, this.SPEED);
   }
@@ -49,8 +50,8 @@ class Head {
   collided (domEl) {
     let top = this.top;
     let left = this.left;
-    let right = left + 50;
-    let bottom = top + 50;
+    let right = left + this.side;
+    let bottom = top + this.side;
     
     let collision = false;
     //collision from the side
@@ -106,6 +107,8 @@ class Head {
       let tempBody = document.querySelector('body');
       if (victim.id === 'head' || victim === tempBody) return;
       victim.parentElement.removeChild(victim);//("class","victim");
+      this.side += 20;
+      this.node.style.cssText = `top: ${this.top}px; left: ${this.left}px; width: ${this.side}px; height: ${this.side}px`;
     }
     
   }
@@ -123,7 +126,7 @@ class Head {
     if (direction === 'down') {
       this.top += 50;
     }
-    this.node.style.cssText = `top: ${this.top}px; left: ${this.left}px`;
+    this.node.style.cssText = `top: ${this.top}px; left: ${this.left}px; width: ${this.side}px; height: ${this.side}px`;
     this.turnCheckCollision();
     this.grabDomElem();
   }
