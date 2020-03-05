@@ -13,8 +13,9 @@ class domElement {
 }
 class Head {
   constructor(el) {
-    let head = document.createElement("div");
+    let head = document.createElement("img");
     head.setAttribute("id", "head");
+    head.src = chrome.runtime.getURL("yeetasaurus.png");
     this.elementArr = [];
     this.grabDomElem = this.grabDomElem.bind(this);
     this.collided = this.collided.bind(this);

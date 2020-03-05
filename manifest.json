@@ -1,8 +1,9 @@
 {
   "manifest_version":2,
-  "name": "yeetasaurus rex",
+  "name": "Phil SMASH",
   "version": "6.1",
   "description": "if the dom is really a tree, there's got to be an apple somewhere in there.",
+  "web_accessible_resources": ["yeetasaurus.png"], // can be more than one
   "content_scripts": [
     {
       "matches": ["*://*/*"],
