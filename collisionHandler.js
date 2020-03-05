@@ -17,7 +17,7 @@ class domElement {
 function grabDomElem() {
   let elementArr = [];
   // let body = document.querySelector('body');
-  let elements = document.querySelectorAll( 'body *:not(.victim)' );
+  let elements = document.querySelectorAll( 'body *');//:not(.victim)' );
   for (let i = 0; i < elements.length; i++) {
     let positionObj = elements[i].getBoundingClientRect();
     let x1 = positionObj.x; //left x
@@ -36,7 +36,7 @@ function collided (domEl, top, left) {
   let right = left + 50;
   let bottom = top + 50;
 
-  let collision;
+  let collision = false;
   //collision from the side
   if (bottom >= domEl.y1 || top <= domEl.y2){
     //from the left

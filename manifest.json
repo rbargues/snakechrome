@@ -1,0 +1,13 @@
+{
+  "manifest_version":2,
+  "name": "yeetasaurus rex",
+  "version": "6.1",
+  "description": "if the dom is really a tree, there's got to be an apple somewhere in there.",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["style.css"],
+      "js": ["main.js"]
+    }
+  ]
+}
