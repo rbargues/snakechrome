@@ -1,0 +1,16 @@
+need a snake
+  snake needs to move
+
+  need to handle collisions
+    on collision hide element that was hit
+
+Sara:
+  make snake head
+  50px square
+  move at set interval
+  using absolute position on page
+  has a left and top coordinate
+  handle if hits border
+
+  
+Raph:
