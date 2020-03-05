@@ -22,7 +22,7 @@ class Head {
     this.grabDomElem();
     this.node = head;
     this.currentDirection = 'right';
-    this.SPEED = 100;
+    this.SPEED = 200;
     el.appendChild(this.node);
     this.top = 0;
     this.left = 0;
